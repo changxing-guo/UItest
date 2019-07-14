@@ -1,0 +1,82 @@
+####    TextView    ####
+1、android控件都具有的两个属性
+    android：lay_out_width
+    android：lay_out_height
+    1）这两个属性都有三个可选值
+        match_parent    当前控件的大小和父布局的大小一致：官方推荐
+        fill_parent     和上一个意义相同
+        warp_content    当前控件的大小刚好包含住里面的内容
+2、android:gravity
+    可选值;top, bottom, left, right,center 等，可以用 "|" 来同时指定多个值
+3、android:textSize
+    字体大小用 sp 作为单位
+4、android:textColor
+
+####    EditText    ####
+5、android:hint
+    输入框提示
+6、android:maxLines
+    最大显示行数，超出后，文本会向上滚动
+
+####    ImageView    ####
+7、图片通常放在drawable开头的目录下，drawable这个目录没有指定具体的分辨率，所以一般不用他来放置图片。
+
+####    ProgressBar    ####
+8、android控件的可见属性
+    android:visibility
+            visible     可见，是默认值
+            invisible   不可见，但他仍然占据着原来的位置和大小
+            gone        不可见，不在占用任何屏幕空间
+9、进度条样式
+    1）默认圆形进度条
+    2）水平
+        style="?android:attr/progressBarStyleHorizontal"    //水平
+        android:max="100"                                   //进度条的最大值
+    3)还有其他样式，百度
+10、java代码中进度条的控制
+    int progress = progressBar.getProgress();
+
+####    AlertDialog    ####
+11、AlertDialog介绍
+    当前界面弹出一个属性对话框，这个对话框是置顶于所有界面元素之上的，能屏蔽掉其他控件的交互能力
+
+####    ProgressDialog    ####
+12、ProgressDialog介绍
+    和AlertDialog类似，一般用于表示当前操作比较耗时，让用户耐心的等待。
+13、java代码中实现
+      ProgressDialog.show();
+      ProgressDialog.dismiss();
+
+####    四种布局方式    ####
+14、线性布局：LinearLayout
+    1)android:orientation   指定排列方向
+        vertical    垂直排列
+        horizontal  水平排列
+    2）android:layout_gravity    控件在布局中的对其方式
+       android:gravity           文本在控件中的对其方式
+    3）android:layout_weight     使用比例的方式来指定控件的大小
+15、相对布局：RelativeLayout
+    通过相对定位的方式让控件出现在布局的任何位置
+    1）控件和布局之间的关系，上下左右中的布局代码
+        android:layout_alignParentLeft
+        android:layout_alignParentRight
+        android:layout_alignParentTop
+        android:layout_alignParentBottom
+        android:layout_centerInParent
+    2）控件和控件之间的关系，上下左右中的布局代码
+        android:layout_toLeftOf
+        android:layout_toRightOf
+        android:layout_above
+        android:layout_below
+    2）控件和控件边缘对齐
+        android:layout_alignLeft
+        android:layout_alignRight
+        android:layout_alignTop
+        android:layout_alignBottom
+16、帧布局：FrameLayout
+    所有的布局都会默认放在布局的左上方，应用场景较少，可以应用于碎片
+17、百分比布局：属于新增布局，定义在support库中。
+    场景模拟：LinearLayout支持使用layout_weight属性来实现按比例指定控件大小的功能，其他两种布局都不支持。
+    1）使用
+        属于新增布局，定义在support库中。
+        在build.gradle中添加百分比布局库的依赖

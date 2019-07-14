@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+   <com.uimanager.test.util.TitleLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Hello World!"
+        android:textColor="@color/darkblue"
+        android:textSize="23sp" />
+
+    <Button
+        android:id="@+id/button_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button_img"
+        android:textAllCaps="true" />
+
+    <Button
+        android:id="@+id/button_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button_progress_bar"
+        android:textAllCaps="true" />
+
+    <Button
+        android:id="@+id/button_progress_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button_progress_dialog"
+        android:textAllCaps="true" />
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="please input"
+        android:maxLines="2" />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_1" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" />
+
+</LinearLayout>

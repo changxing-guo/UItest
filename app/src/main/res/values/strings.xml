@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">UI_VIEW</string>
+    <string name="button1">Button_1</string>
+    <string name="button2">Button_2</string>
+    <string name="button3">Button_3</string>
+    <string name="button4">Button_4</string>
+    <string name="button5">Button_5</string>
+    <string name="button6">Button_6</string>
+    <string name="edit_hint">please input</string>
+    <string name="button7">Button_7</string>
+</resources>
