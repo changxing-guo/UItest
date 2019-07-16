@@ -7,6 +7,7 @@ import androidx.appcompat.app.ActionBar;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,7 +19,8 @@ import android.widget.ProgressBar;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = "MainActivity";
-    private Button button_img, button_progress_bar, button_progress_dialog;
+    private Button button_img, button_progress_bar, button_progress_dialog,
+            button_third_activity;
     private EditText editText;
     private ImageView imageView;
     private ProgressBar progressBar;
@@ -50,12 +52,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editText = (EditText) findViewById(R.id.edit_text);
         imageView = (ImageView) findViewById(R.id.image_view);
         progressBar = (ProgressBar) findViewById(R.id.progress_bar);
+        button_third_activity = (Button) findViewById(R.id.button_third_activity);
     }
 
     void onClick() {
         button_img.setOnClickListener(this);
         button_progress_bar.setOnClickListener(this);
         button_progress_dialog.setOnClickListener(this);
+        button_third_activity.setOnClickListener(this);
     }
 
     @Override
@@ -76,6 +80,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button_progress_dialog:
                 startProgressDialog();
+                break;
+            case R.id.button_third_activity:
+                Intent intent = new Intent(MainActivity.this, ListViewActivity.class);
+                startActivity(intent);
                 break;
             default:
                 break;
